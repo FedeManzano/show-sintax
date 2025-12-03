@@ -1,4 +1,4 @@
-import $ from "jquery"
+
 import numerar from "./Numeracion"
 
 
@@ -6,22 +6,22 @@ import numerar from "./Numeracion"
 
     const colorearCadenas = (codigo) => {
         let resultado = ""
-        for(let i = 0; i < codigo.length; i ++ ){
-            if(codigo[i] === '"' || codigo[i] === "'" || codigo[i] === "`") {
-                let car = codigo[i] 
+        for (let i = 0; i < codigo.length; i++) {
+            if (codigo[i] === '"' || codigo[i] === "'" || codigo[i] === "`") {
+                let car = codigo[i]
                 resultado += "<span class='show-string'>" + codigo[i] + "</span>"
-                i ++ 
-                while(i < codigo.length && codigo[i] !== car) {
+                i++
+                while (i < codigo.length && codigo[i] !== car) {
                     resultado += "<span class='show-string'>" + codigo[i] + "</span>"
-                    i ++
+                    i++
                 }
-                if(codigo[i] === car) {
+                if (codigo[i] === car) {
                     resultado += "<span class='show-string'>" + codigo[i] + "</span>"
-                    i ++
+                    i++
                 }
                 resultado += codigo[i]
-            }else {
-                resultado +=  codigo[i] 
+            } else {
+                resultado += codigo[i]
             }
         }
 
@@ -35,62 +35,62 @@ import numerar from "./Numeracion"
         let pal = ""
         let aux = codigo.substring(bus, codigo.length)
         let i = 0
-        
 
 
-        while(bus !== -1) { 
+
+        while (bus !== -1) {
             pal = ""
-            while(aux[i] !== ' ' && i < aux.length)
-                i ++
-            while(aux[i] === ' ' && i < aux.length)
-                i ++
-            while(aux[i] !== ' ' && i < aux.length)
-                i ++
-            while(aux[i] === ' ' && i < aux.length)
-                i ++
-            while(aux[i] !== ' ' && aux[i] !== ';' && aux[i] !== '='  && i < aux.length) {
+            while (aux[i] !== ' ' && i < aux.length)
+                i++
+            while (aux[i] === ' ' && i < aux.length)
+                i++
+            while (aux[i] !== ' ' && i < aux.length)
+                i++
+            while (aux[i] === ' ' && i < aux.length)
+                i++
+            while (aux[i] !== ' ' && aux[i] !== ';' && aux[i] !== '=' && i < aux.length) {
                 pal += aux[i]
-                i ++
+                i++
             }
-    
-            codigo = codigo.replace(pal, "<span class='show-ajava'>"+ pal + "</span>")
-            
+
+            codigo = codigo.replace(pal, "<span class='show-ajava'>" + pal + "</span>")
+
             aux = aux.substring(i + 1, aux.length)
-           
+
             bus = aux.search(met)
             i = bus
-    
+
         }
 
-        
+
         return codigo
     }
     const colorearComentarios = (codigo) => {
         let resultado = ""
-        for(var i = 0; i < codigo.length; i ++ ){ 
-            if(codigo[i] === '/' && codigo[i + 1] === '/') {
+        for (var i = 0; i < codigo.length; i++) {
+            if (codigo[i] === '/' && codigo[i + 1] === '/') {
                 resultado += "<span class='show-com'>" + codigo[i] + "</span>"
-                i ++ 
-                while(codigo[i] !== '\n' && i < codigo.length) {
+                i++
+                while (codigo[i] !== '\n' && i < codigo.length) {
                     resultado += "<span class='show-com'>" + codigo[i] + "</span>"
-                    i ++ 
+                    i++
                 }
-                resultado +=  codigo[i] 
-            } else if(codigo[i] === '/' && codigo[i + 1] === '*') {
+                resultado += codigo[i]
+            } else if (codigo[i] === '/' && codigo[i + 1] === '*') {
                 resultado += "<span class='show-com'>" + codigo[i] + "</span>"
-                i ++ 
-                while(codigo[i] !== '/' && i < codigo.length) {
+                i++
+                while (codigo[i] !== '/' && i < codigo.length) {
                     resultado += "<span class='show-com'>" + codigo[i] + "</span>"
-                    i ++ 
+                    i++
                 }
-                if(codigo[i] === '/' ) {
+                if (codigo[i] === '/') {
                     resultado += "<span class='show-com'>" + codigo[i] + "</span>"
-                    i ++ 
+                    i++
                 }
-                resultado +=  codigo[i] 
+                resultado += codigo[i]
             }
             else {
-                resultado +=  codigo[i] 
+                resultado += codigo[i]
             }
         }
         return resultado
@@ -102,30 +102,30 @@ import numerar from "./Numeracion"
         let pal = ""
         let aux = codigo.substring(bus, codigo.length)
         let i = 0
-        
 
 
-        while(bus !== -1) { 
+
+        while (bus !== -1) {
             pal = ""
-            while(aux[i] !== '.' && i < aux.length)
-                i ++
-            while(aux[i] === '.' && i < aux.length)
-                i ++
-            while(aux[i] !== ' ' && aux[i] !== ';' && aux[i] !== '='  && i < aux.length) {
+            while (aux[i] !== '.' && i < aux.length)
+                i++
+            while (aux[i] === '.' && i < aux.length)
+                i++
+            while (aux[i] !== ' ' && aux[i] !== ';' && aux[i] !== '=' && i < aux.length) {
                 pal += aux[i]
-                i ++
+                i++
             }
-    
-            codigo = codigo.replace(new RegExp("this\." +pal,"g"), "<span class='show-ajava'>"+ "this." + pal + "</span>")
-            
+
+            codigo = codigo.replace(new RegExp("this\." + pal, "g"), "<span class='show-ajava'>" + "this." + pal + "</span>")
+
             aux = aux.substring(i + 1, aux.length)
-           
+
             bus = aux.search(met)
             i = bus
-    
+
         }
 
-        
+
         return codigo
     }
 
@@ -136,26 +136,26 @@ import numerar from "./Numeracion"
         let pal = ""
         let aux = codigo.substring(bus, codigo.length)
         let i = 0
-        
 
 
-        while(bus !== -1) { 
+
+        while (bus !== -1) {
             pal = ""
-            while(aux[i] !== ' ' && aux[i] !== ';' && aux[i] !== '='  && i < aux.length) {
+            while (aux[i] !== ' ' && aux[i] !== ';' && aux[i] !== '=' && i < aux.length) {
                 pal += aux[i]
-                i ++
+                i++
             }
-    
-            codigo = codigo.replace(new RegExp(pal,"g"), "<span class='show-sobre'>"+  pal + "</span>")
-            
+
+            codigo = codigo.replace(new RegExp(pal, "g"), "<span class='show-sobre'>" + pal + "</span>")
+
             aux = aux.substring(i + 1, aux.length)
-           
+
             bus = aux.search(met)
             i = bus
-    
+
         }
 
-        
+
         return codigo
     }
 
@@ -167,38 +167,38 @@ import numerar from "./Numeracion"
         let pal = ""
         let aux = codigo.substring(bus, codigo.length)
         let i = 0
-        
+
         let retorno = ""
 
-        while(bus !== -1) { 
+        while (bus !== -1) {
             pal = ""
             retorno = ""
-            while(aux[i] !== ' ' && i < aux.length) {
+            while (aux[i] !== ' ' && i < aux.length) {
                 retorno += aux[i]
-                i ++
-            }
-                
-            while(aux[i] === ' ' && i < aux.length)
-                i ++
-            while(aux[i] !== '(' && i < aux.length) {
-                pal += aux[i]
-                i ++
+                i++
             }
 
-            if(retorno !== "new" && retorno !== "public")
+            while (aux[i] === ' ' && i < aux.length)
+                i++
+            while (aux[i] !== '(' && i < aux.length) {
+                pal += aux[i]
+                i++
+            }
+
+            if (retorno !== "new" && retorno !== "public")
                 codigo = codigo.replace(retorno + " " + pal, `<span class='show-control'>${retorno}</span> <span class='show-met'>${pal}</span>`)
             else {
                 codigo = codigo.replace(pal, `<span class='show-met'>${pal}</span>`)
             }
-               
+
             aux = aux.substring(i + 1, aux.length)
-           
+
             bus = aux.search(met)
             i = bus
-    
+
         }
 
-        
+
         return codigo
     }
 
@@ -208,15 +208,15 @@ import numerar from "./Numeracion"
         let bus = codigo.search(met)
         let aux = codigo.substring(bus, codigo.length)
         let i = 0
-       
-        while(bus !== -1) { 
+
+        while (bus !== -1) {
             let pal = ""
             i++
-            while(aux[i] !== '(') {
+            while (aux[i] !== '(') {
                 pal += aux[i]
-                i ++
+                i++
             }
-        
+
             codigo = codigo.replace(new RegExp(`${pal}`, "g"), `<span class='show-llamadas'>${pal}</span>`)
             aux = aux.substring(i + 1, aux.length)
             bus = aux.search(met)
@@ -226,15 +226,15 @@ import numerar from "./Numeracion"
         return codigo
     }
 
-    const inicializar = ({lineas = true}={}) => {
+    const inicializar = ({ lineas = true } = {}) => {
 
-        $(".cod-java").each((index, e) => {
-            let codigo = $(e).html()
-            $(e).text(codigo)
+        document.querySelectorAll(".cod-java").forEach((e) => {
+            let codigo = e.innerHTML
+            e.textContent = codigo
             let resultado = codigo
-            
-            
-            
+
+
+
             resultado = colorearCadenas(resultado)
             resultado = colorearComentarios(resultado)
             resultado = colrearMetodo(resultado)
@@ -263,7 +263,7 @@ import numerar from "./Numeracion"
             resultado = resultado.replace(/false /g, "<span class='show-res'>false </span>")
             resultado = resultado.replace(/new /g, "<span class='show-res'>new </span>")
             resultado = resultado.replace(/interface/g, "<span class='show-control'>interface</span>")
-            
+
 
             resultado = resultado.replace(/try/g, "<span class='show-control'>try</span>")
             resultado = resultado.replace(/catch/g, "<span class='show-control'>catch</span>")
@@ -292,10 +292,10 @@ import numerar from "./Numeracion"
             resultado = resultado.replace(/for /g, "<span class='show-control'>for </span>")
             resultado = resultado.replace(/break/g, "<span class='show-control'>break</span>")
 
-            
+
 
             resultado = resultado.replace(/!/g, "<span class='show-res'>!</span>")
-            
+
 
             resultado = resultado.replace(/console\./g, "<span class='show-sistema'>console</span><span class='show-neutro'>.</span>")
             resultado = resultado.replace(/window\./g, "<span class='show-sistema'>window</span><span class='show-neutro'>.</span>")
@@ -313,7 +313,7 @@ import numerar from "./Numeracion"
             resultado = resultado.replace(/===/g, "<span class='show-neutro'>===</span>")
             resultado = resultado.replace(/[^show-]\-/g, "<span class='show-neutro'>-</span>")
             resultado = resultado.replace(/[^class=]=/g, "<span class='show-neutro'>=</span>")
-            
+
 
 
 
@@ -329,13 +329,13 @@ import numerar from "./Numeracion"
             resultado = resultado.replace(/8/g, "<span class='show-numeros'>8</span>")
             resultado = resultado.replace(/9/g, "<span class='show-numeros'>9</span>")
 
-            $(e).html(resultado)
-            if(lineas)
+            e.innerHTML = resultado
+            if (lineas)
                 numerar(e, codigo)
         })
     }
 
-    
+
 
     const CodigoJava = {
         iniciar: (config) => {
@@ -347,4 +347,4 @@ import numerar from "./Numeracion"
 })()
 
 export default CodigoJava
-     
+

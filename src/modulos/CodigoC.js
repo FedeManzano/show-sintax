@@ -1,42 +1,42 @@
-import $ from "jquery"
+
 import numerar from "./Numeracion"
 
 (function () {
 
     const colorearCadenas = (codigo) => {
         let resultado = ""
-        for(let i = 0; i < codigo.length; i ++ ){
-            if(codigo[i] === '"' || codigo[i] === "'" || codigo[i] === "`") {
-                let car = codigo[i] 
+        for (let i = 0; i < codigo.length; i++) {
+            if (codigo[i] === '"' || codigo[i] === "'" || codigo[i] === "`") {
+                let car = codigo[i]
                 resultado += "<span class='show-string'>" + codigo[i] + "</span>"
-                i ++ 
-                while(i < codigo.length && codigo[i] !== car) {
-                    if(car === '`') {
-                        if(codigo[i] === '$') {
-                            while(i < codigo.length && codigo[i] !== '}') {
+                i++
+                while (i < codigo.length && codigo[i] !== car) {
+                    if (car === '`') {
+                        if (codigo[i] === '$') {
+                            while (i < codigo.length && codigo[i] !== '}') {
                                 resultado += "<span class='show-res'>" + codigo[i] + "</span>"
-                                i ++
+                                i++
                             }
-                            if(codigo[i] === '}') {
+                            if (codigo[i] === '}') {
                                 resultado += "<span class='show-res'>" + codigo[i] + "</span>"
-                                i ++
+                                i++
                             }
                         } else {
                             resultado += "<span class='show-string'>" + codigo[i] + "</span>"
-                            i ++
+                            i++
                         }
                     } else {
                         resultado += "<span class='show-string'>" + codigo[i] + "</span>"
-                        i ++
+                        i++
                     }
                 }
-                if(codigo[i] === car) {
+                if (codigo[i] === car) {
                     resultado += "<span class='show-string'>" + codigo[i] + "</span>"
-                    i ++
+                    i++
                 }
                 resultado += codigo[i]
-            }else {
-                resultado +=  codigo[i] 
+            } else {
+                resultado += codigo[i]
             }
         }
 
@@ -46,30 +46,30 @@ import numerar from "./Numeracion"
 
     const colorearComentarios = (codigo) => {
         let resultado = ""
-        for(var i = 0; i < codigo.length; i ++ ){ 
-            if(codigo[i] === '/' && codigo[i + 1] === '/') {
+        for (var i = 0; i < codigo.length; i++) {
+            if (codigo[i] === '/' && codigo[i + 1] === '/') {
                 resultado += "<span class='show-com'>" + codigo[i] + "</span>"
-                i ++ 
-                while(codigo[i] !== '\n' && i < codigo.length) {
+                i++
+                while (codigo[i] !== '\n' && i < codigo.length) {
                     resultado += "<span class='show-com'>" + codigo[i] + "</span>"
-                    i ++ 
+                    i++
                 }
-                resultado +=  codigo[i] 
-            } else if(codigo[i] === '/' && codigo[i + 1] === '*') {
+                resultado += codigo[i]
+            } else if (codigo[i] === '/' && codigo[i + 1] === '*') {
                 resultado += "<span class='show-com'>" + codigo[i] + "</span>"
-                i ++ 
-                while(codigo[i] !== '/' && i < codigo.length) {
+                i++
+                while (codigo[i] !== '/' && i < codigo.length) {
                     resultado += "<span class='show-com'>" + codigo[i] + "</span>"
-                    i ++ 
+                    i++
                 }
-                if(codigo[i] === '/' ) {
+                if (codigo[i] === '/') {
                     resultado += "<span class='show-com'>" + codigo[i] + "</span>"
-                    i ++ 
+                    i++
                 }
-                resultado +=  codigo[i] 
+                resultado += codigo[i]
             }
             else {
-                resultado +=  codigo[i] 
+                resultado += codigo[i]
             }
         }
         return resultado
@@ -82,22 +82,22 @@ import numerar from "./Numeracion"
         let pal = ""
         let aux = codigo.substring(bus, codigo.length)
         let i = 0
-        
+
         let retorno = ""
 
-        while(bus !== -1) { 
+        while (bus !== -1) {
             pal = ""
             retorno = ""
-            while(aux[i] !== ' ' && i < aux.length) {
+            while (aux[i] !== ' ' && i < aux.length) {
                 retorno += aux[i]
-                i ++
+                i++
             }
-                
-            while(aux[i] === ' ' && i < aux.length)
-                i ++
-            while(aux[i] !== '(' && i < aux.length) {
+
+            while (aux[i] === ' ' && i < aux.length)
+                i++
+            while (aux[i] !== '(' && i < aux.length) {
                 pal += aux[i]
-                i ++
+                i++
             }
             codigo = codigo.replace(retorno + " " + pal, `<span class='show-control'>${retorno}</span> <span class='show-c'>${pal}</span>`)
             aux = aux.substring(i + 1, aux.length)
@@ -105,7 +105,7 @@ import numerar from "./Numeracion"
             i = bus
         }
 
-        
+
         return codigo
     }
 
@@ -114,30 +114,30 @@ import numerar from "./Numeracion"
         let bus = codigo.search(met)
         let aux = codigo.substring(bus, codigo.length)
         let i = 0
-    
 
-        while(bus !== -1) { 
+
+        while (bus !== -1) {
             let pal = ""
             let lib = ""
-            while(aux[i] !== '<' && i < aux.length) {
+            while (aux[i] !== '<' && i < aux.length) {
                 pal += aux[i]
-                i ++
+                i++
             }
 
-            i ++ 
-            while(aux[i] !== '>' && i < aux.length) {
+            i++
+            while (aux[i] !== '>' && i < aux.length) {
                 lib += aux[i]
-                i ++
+                i++
             }
 
-            if(lib !== "span class='show-string'")
+            if (lib !== "span class='show-string'")
                 codigo = codigo.replace(pal, `<span class='show-inc'>${pal}</span> <span class='show-inc'>&lt;${lib}&gt;</span>`)
             aux = aux.substring(i + 1, aux.length)
             bus = aux.search(met)
             i = bus
         }
 
-        
+
         return codigo
     }
 
@@ -146,13 +146,13 @@ import numerar from "./Numeracion"
         let bus = codigo.search(met)
         let aux = codigo.substring(bus, codigo.length)
         let i = 0
-    
 
-        while(bus !== -1) { 
+
+        while (bus !== -1) {
             let pal = ""
-            while(aux[i] !== '\n' && i < aux.length) {
+            while (aux[i] !== '\n' && i < aux.length) {
                 pal += aux[i]
-                i ++
+                i++
             }
             codigo = codigo.replace(pal, `<span class='show-inc'>${pal}</span>`)
             aux = aux.substring(i + 1, aux.length)
@@ -160,7 +160,7 @@ import numerar from "./Numeracion"
             i = bus
         }
 
-        
+
         return codigo
     }
 
@@ -169,13 +169,13 @@ import numerar from "./Numeracion"
         let bus = codigo.search(met)
         let aux = codigo.substring(bus, codigo.length)
         let i = 0
-    
 
-        while(bus !== -1) { 
+
+        while (bus !== -1) {
             let pal = ""
-            while(aux[i] !== '\n' && i < aux.length) {
+            while (aux[i] !== '\n' && i < aux.length) {
                 pal += aux[i]
-                i ++
+                i++
             }
             codigo = codigo.replace(pal, `<span class='show-inc'>${pal}</span>`)
             aux = aux.substring(i + 1, aux.length)
@@ -183,15 +183,15 @@ import numerar from "./Numeracion"
             i = bus
         }
 
-        
+
         return codigo
     }
 
 
-    const inicializar = ({lineas=true}={}) => {
-        $(".cod-c").each((index, e) => {
-            let codigo = $(e).html()
-            $(e).text(codigo)
+    const inicializar = ({ lineas = true } = {}) => {
+        document.querySelectorAll(".cod-c").forEach((e) => {
+            let codigo = e.innerHTML
+            e.textContent = codigo
 
 
             let resultado = colorearCadenas(codigo)
@@ -220,23 +220,23 @@ import numerar from "./Numeracion"
             resultado = resultado.replace(/#endif/g, "<span class='show-inc'>#endif</span>")
             resultado = resultado.replace(/#ifndef/g, "<span class='show-inc'>#ifndef</span>")
             resultado = resultado.replace(/if[\t ]*\(/g, "<span class='show-res'>if </span><span class='show-neutro'>(</span>")
-            
+
             resultado = resultado.replace(/switch[\t ]*\(/g, "<span class='show-res'>switch </span></span><span class='show-neutro'>(</span>")
             resultado = resultado.replace(/while[\t ]*\(/g, "<span class='show-res'>while </span></span><span class='show-neutro'>(</span>")
             resultado = resultado.replace(/for[\t ]*\(/g, "<span class='show-res'>for </span></span><span class='show-neutro'>(</span>")
             resultado = resultado.replace(/do[\t\n ]*{/g, "<span class='show-res'>do </span></span><span class='show-neutro'>{</span>")
             resultado = resultado.replace(/else /g, "<span class='show-res'>else </span>")
-            
+
             resultado = resultado.replace(/case/g, "<span class='show-res'>case</span>")
             resultado = resultado.replace(/break/g, "<span class='show-res'>break</span>")
             resultado = resultado.replace(/sizeof/g, "<span class='show-res'>sizeof</span>")
             resultado = resultado.replace(/typedef/g, "<span class='show-res'>typedef</span>")
             resultado = resultado.replace(/struct/g, "<span class='show-res'>struct</span>")
-            
-        
-            $(e).html(resultado)
 
-            if(lineas) 
+
+            e.innerHTML = resultado
+
+            if (lineas)
                 numerar(e, codigo)
         })
     }
@@ -251,4 +251,4 @@ import numerar from "./Numeracion"
 })()
 
 export default CodigoC
-     
+
