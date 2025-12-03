@@ -32,6 +32,6 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "braces": "^3.0.2"
+    "braces": "^3.0.3"
   }
 }
