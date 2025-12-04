@@ -31,6 +31,8 @@
     <a href="#inicio-rápido">Descargar</a>
 </p>
 
+<h4 align="center">Biblioteca dedicada a resaltar el código fuente en las páginas web</h4>
+
 ---
 
 <h2>:book: Acerca de Show Code</h2>
