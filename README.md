@@ -68,8 +68,12 @@ La forma más rápida de usar **Show Code** es mediante CDN:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tema claro -->
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/show-sintax/refs/heads/master/dist/css/tema-claro.min.css">
+    
     <!-- Tema oscuro -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FedeManzano/show-code@main/dist/css/tema-oscuro.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/FedeManzano/show-sintax/refs/heads/master/dist/css/tema-oscuro.min.css">
+
     <title>Show Code Demo</title>
 </head>
 <body>
@@ -78,7 +82,7 @@ La forma más rápida de usar **Show Code** es mediante CDN:
         console.log("¡Hola Mundo!");
     </pre>
 
-    <script src="https://cdn.jsdelivr.net/gh/FedeManzano/show-code@main/dist/js/sintax.js"></script>
+    <script src="https://rawcdn.githack.com/FedeManzano/show-sintax/refs/heads/master/dist/js/sintax.min.js"></script>
     <script>
         Show.ShowJsInit()
     </script>
