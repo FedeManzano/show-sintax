@@ -22,12 +22,21 @@
     </a>
 </p>
 
+<p align="center">
+    <a>Inicio Rápido</a> •
+    <a>Instalación</a> •
+    <a>Documentación</a> •
+    <a>Contribuir</a> •
+    <a>Soporte</a> •
+    <a>Descargar</a>
+</p>
+
 ---
 
 <h2>:book: Acerca de Show Code</h2>
 
 **Show Code** es una dependencia de la biblioteca que se encarga de brindar funcionalidades para la creación del Front-End <a href="https://github.com/FedeManzano/bodystyle">BodyStyle</a>. </br>
-En este caso la función principal de esta dependencia es resaltar el código fuente en diferentes lenguajes de programación. </br>
+En este caso la función principal de esta dependencia es resaltar el código fuente en diferentes lenguajes de programación 
 ```JavaScript```, ```Java```, ```C```, ```CSS``` y ```HTML```.
 
 ---
