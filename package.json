@@ -1,5 +1,5 @@
 {
-  "name": "show-code",
+  "name": "@bodystyle/show-code",
   "version": "2.0.0",
   "description": "Librería para resaltar el código fuente",
   "main": "app.js",

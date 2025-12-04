@@ -17,8 +17,8 @@
     <a target="_blank" href="https://github.com/FedeManzano/show-code">
         <img src="https://img.shields.io/badge/size-20KB-blue" alt="Size">
     </a>
-    <a target="_blank" href="https://www.npmjs.com/package/show-code">
-        <img src="https://img.shields.io/npm/v/show-code" alt="npm">
+    <a target="_blank" href="https://www.npmjs.com/package/@bodystyle/show-code">
+        <img src="https://img.shields.io/npm/v/@bodystyle/show-code" alt="npm">
     </a>
 </p>
 
@@ -93,7 +93,7 @@ La forma más rápida de usar **Show Code** es mediante CDN:
 ### Via npm
 
 ```bash
-npm install show-code
+npm install @bodystyle/show-code
 ```
 
 ### Via CDN
