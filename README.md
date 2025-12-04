@@ -23,7 +23,8 @@
 </p>
 
 <p align="center">
-    <a href="#rocket-inicio-rápido">Inicio Rápido</a> •
+    <a href="#rocket-inicio-rápido">Acerca de.</a> •
+<a href="#rocket-inicio-rápido">Inicio Rápido</a> •
     <a href="#inicio-rápido">Instalación</a> •
     <a href="#inicio-rápido">Documentación</a> •
     <a href="#inicio-rápido">Contribuir</a> •
@@ -40,7 +41,7 @@
 **Show Code** es una dependencia de la biblioteca que se encarga de brindar funcionalidades para la creación del Front-End <a href="https://github.com/FedeManzano/bodystyle">BodyStyle</a>. </br>
 En este caso la función principal de esta dependencia es resaltar el código fuente en diferentes lenguajes de programación ```JavaScript```, ```Java```, ```C```, ```CSS``` y ```HTML```.
 
-- :white_check_mark: **Biblioteca liviana su Bundled es de 20KB.**
+- :white_check_mark: Biblioteca liviana - **Su Bundled es de 20KB.**
 - :white_check_mark: **Fácil de agregar al proyecto.**
 - :white_check_mark: **No necesita configuración.**
 - :white_check_mark: **Toda la lóogica de la biblioteca esta en Vanilla JavaScript.**
