@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./logo/logo.png" alt="Logo" width="250px" height="250px">
+<img src="./logo/logo.png" alt="Logo" width="200px" height="200px">
 </p>
 
 <h1 align="center">Show Code</h1>
@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-    <a href="#inicio-rápido">Inicio Rápido</a> •
+    <a href="#rocket-inicio-rápido">Inicio Rápido</a> •
     <a href="#inicio-rápido">Instalación</a> •
     <a href="#inicio-rápido">Documentación</a> •
     <a href="#inicio-rápido">Contribuir</a> •

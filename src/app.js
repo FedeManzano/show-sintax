@@ -1,8 +1,8 @@
 /*!
- * Show Code v1.1.0
+ * Show Code v2.0.0
  * Copyright Federico Manzano
  * Licencia MIT
- * Repositorio (https://github.com/FedericoManzano/show-code-v1.1.0-fuente)
+ * Repositorio (https://github.com/FedeManzano/show-code)
  */
 
 import CodigoHtml from "./modulos/CodigoHtml"
@@ -11,7 +11,7 @@ import CodigoJs from "./modulos/CodigoJs"
 import CodigoJava from "./modulos/CodigoJava"
 import CodigoC from "./modulos/CodigoC"
 
-(function() {
+(function () {
     const ShowHtml = (conf) => {
         CodigoHtml.iniciar(conf)
     }
@@ -36,7 +36,7 @@ import CodigoC from "./modulos/CodigoC"
         ShowHtmlInit: (conf) => ShowHtml(conf),
         ShowCssInit: (conf) => ShowCss(conf),
         ShowJsInit: (conf) => ShowJs(conf),
-        ShowJavaInit: (conf) =>  ShowJava(conf),
+        ShowJavaInit: (conf) => ShowJava(conf),
         ShowCInit: (conf) => ShowC(conf)
     }
 
