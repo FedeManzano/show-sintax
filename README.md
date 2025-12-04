@@ -23,12 +23,12 @@
 </p>
 
 <p align="center">
-    <a>Inicio Rápido</a> •
-    <a>Instalación</a> •
-    <a>Documentación</a> •
-    <a>Contribuir</a> •
-    <a>Soporte</a> •
-    <a>Descargar</a>
+    <a href="#inicio-rápido">Inicio Rápido</a> 
+    <a href="#inicio-rápido">Instalación</a> •
+    <a href="#inicio-rápido">Documentación</a> 
+    <a href="#inicio-rápido">Contribuir</a> •
+    <a href="#inicio-rápido">Soporte</a> •
+    <a href="#inicio-rápido">Descargar</a>
 </p>
 
 ---
