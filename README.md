@@ -48,7 +48,60 @@ En este caso la función principal de esta dependencia es resaltar el código fu
 La forma más rápida de disponer de **Show Code** es mediante el ```CDN``` del archivo de estilo minificado y el que contiene la lógica del código fuente.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/show-code@2.0.0/dist/css/show-code.min.css">
-<script src="https://cdn.jsdelivr.net/npm/show-code@2.0.0/dist/js/show-code.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/css/tema-oscuro.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <pre class="cod-java">
+       // Código Java
+       System.out.println("Hola Mundo");
+    </pre>
+
+    <pre class="cod-js" style="margin-top: 10px;">
+        // Código JavaScript
+        console.log("Hola Mundo");
+    </pre>
+
+    <pre class="cod-html" style="margin-top: 10px;">
+        <!-- Código HTML -->
+        <h1>Hola Mundo</h1>
+    </pre>
+
+    <pre class="cod-css" style="margin-top: 10px;">
+        /* Código CSS */
+        h1 {
+            color: red;
+        }
+    </pre>
+
+    <pre class="cod-c" style="margin-top: 10px;">
+        // Código C
+        #include <stdio.h>
+
+        int main() {
+            printf("Hola Mundo");
+            return 0;
+        }
+    </pre>
+
+    <script src="../dist/js/sintax.js"></script>
+    <script>
+        Show.ShowJavaInit()
+        Show.ShowJsInit()
+        Show.ShowHtmlInit()
+        Show.ShowCssInit()
+        Show.ShowCInit()
+    </script>
+</body>
+</html>
 ```
 
