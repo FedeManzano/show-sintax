@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-    <a href="#inicio-rápido">Inicio Rápido</a> 
+    <a href="#inicio-rápido">Inicio Rápido</a> •
     <a href="#inicio-rápido">Instalación</a> •
     <a href="#inicio-rápido">Documentación</a> •
     <a href="#inicio-rápido">Contribuir</a> •
