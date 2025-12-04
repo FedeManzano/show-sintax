@@ -13,51 +13,50 @@
 <body>
 
     <pre class="cod-css">
-        /**
-        *    Comentario multi linea
-        **********************************************************/
-        .fila .offset-xs-6-11 a{
-            color: #999;
+
+        .menu_flotante {
+            border-radius: 10px;
+            background-color: #eeeeee;
+            border: 1px solid #666;
+            min-width: 290px !important;
+            padding-top: 7px;
         }
-        .fila .offset-xs-6-12 {
-            grid-column: 7/span 12;
+        .menu_flotante .usuario {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 3px;
         }
-        .fila .offset-xs-7-1 {
-            grid-column: 8/span 1;
+        .menu_flotante .usuario img {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
         }
-        .fila .offset-xs-7-2 {
-            grid-column: 8/span 2;
+        .menu_flotante .item {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 5px 4px;
         }
-        .fila .offset-xs-7-3 {
-        grid-column: 8/span 3;
+        .menu_flotante .item i{
+            margin-right: 20px;
+            margin-left: 20px;
+            font-size: 22px;
+            color: #666;
         }
-        .fila .offset-xs-7-4 {
-            grid-column: 8/span 4;
+        .menu_flotante .item a{
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(70, 70, 70);
         }
-        .fila .offset-xs-7-5 {
-        grid-column: 8/span 5;
+        .menu_flotante .item:hover > a{
+            color: rgb(153, 153, 153);
         }
-        .fila .offset-xs-7-6 {
-            grid-column: 8/span 6;
+        .menu_flotante .item:hover > i{
+            color: rgb(153, 153, 153);
         }
-        .fila .offset-xs-7-7 {
-            grid-column: 8/span 7;
-        }
-        .fila .offset-xs-7-8 {
-            grid-column: 8/span 8;
-        }
-        .fila .offset-xs-7-9 {
-            grid-column: 8/span 9 !important;
-        }
-        .fila .offset-xs-7-10 {
-            grid-column: 8/span 10;
-        }
-        .fila .offset-xs-7-11 {
-            grid-column: 8/span 11;
-        }
-        .fila .offset-xs-7-12 {
-            grid-column: 8/span 12;
-        }
+    
     </pre>
 
     <script src="../dist/js/sintax.js"></script>
