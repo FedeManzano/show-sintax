@@ -1,11 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/app.js',
   output: {
     path: path.join(__dirname, 'dist/js'),
-    filename: 'sintax.min.js'
+    filename: 'sintax.js'
   },
   module: {
     rules: [

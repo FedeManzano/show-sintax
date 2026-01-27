@@ -8,7 +8,7 @@
 pre[class^=cod-] {
   overflow: auto;
   font-family: "Source Code Pro" !important;
-  font-weight: 300;
+  font-weight: 300 !important;
   background-color: white !important;
   color: black !important;
   font-size: 1em;

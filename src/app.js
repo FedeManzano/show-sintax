@@ -10,6 +10,7 @@ import CodigoCss from "./modulos/CodigoCss"
 import CodigoJs from "./modulos/CodigoJs"
 import CodigoJava from "./modulos/CodigoJava"
 import CodigoC from "./modulos/CodigoC"
+import CodigoSql from "./modulos/CodigoSql"
 
 (function () {
     const ShowHtml = (conf) => {
@@ -32,12 +33,17 @@ import CodigoC from "./modulos/CodigoC"
         CodigoC.iniciar(conf)
     }
 
+    const ShowSql = (conf) => {
+        CodigoSql.Init(conf)
+    }
+
     const Show = {
         ShowHtmlInit: (conf) => ShowHtml(conf),
         ShowCssInit: (conf) => ShowCss(conf),
         ShowJsInit: (conf) => ShowJs(conf),
         ShowJavaInit: (conf) => ShowJava(conf),
-        ShowCInit: (conf) => ShowC(conf)
+        ShowCInit: (conf) => ShowC(conf),
+        ShowSqlInit: (conf) => ShowSql(conf)
     }
 
     window.Show = Show

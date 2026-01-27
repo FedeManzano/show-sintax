@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="../dist/css/tema-oscuro.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+<pre class="cod-sql">
+    -- Código SQL
+    /**
+        Esto es un comentario multilinea
+        para generar código SQL
+    */
+    SELECT * FROM usuarios WHERE edad > 18;
+
+
+    CREATE OR ALTER FUNCTION ObtenerUsuariosActivos()
+    RETURNS TABLE (Id INT, Nombre VARCHAR(100), Activo BIT)
+    AS
+    BEGIN
+        RETURN SELECT Id, Nombre, Activo FROM Usuarios WHERE Activo = 1;
+    END;
+    "aassdadas"
+    SUBSTRING('Hola Mundo', 1, 4);
+    LEN('Hola Mundo');
+    
+    CREATE OR ALTER PROCESURE ActualizarEdadUsuario
+        @Id INT,
+        @NuevaEdad INT
+    AS
+    BEGIN
+        UPDATE Usuarios SET Edad = @NuevaEdad WHERE Id = @Id;
+    END;
+</pre>
+
+
+    <script src="../dist/js/sintax.js"></script>
+    <script>Show.ShowSqlInit()</script>
+</body>
+
+</html>
