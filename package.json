@@ -1,6 +1,6 @@
 {
   "name": "@bodystyle/show-code",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Librería para resaltar el código fuente",
   "main": "app.js",
   "scripts": {

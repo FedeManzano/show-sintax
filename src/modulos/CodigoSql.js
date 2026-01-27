@@ -88,6 +88,10 @@
             codigo = codigo.replace(/(NOW|now)(?![^<]*<\/span>)/g, '<span class="show-met">NOW</span>');
 
             // Palabras clave SQL principales
+            codigo = codigo.replace(/(ON|on)(?![^<]*<\/span>)/g, '<span class="show-claves">ON</span>');
+            codigo = codigo.replace(/(GROUP|group)(?![^<]*<\/span>)/g, '<span class="show-claves">GROUP</span>');
+            codigo = codigo.replace(/(ORDER|order)(?![^<]*<\/span>)/g, '<span class="show-claves">ORDER</span>');
+            codigo = codigo.replace(/(BY|by)(?![^<]*<\/span>)/g, '<span class="show-claves">BY</span>');
             codigo = codigo.replace(/(SELECT|select)(?![^<]*<\/span>)/g, '<span class="show-claves">SELECT</span>');
             codigo = codigo.replace(/(FROM|from)(?![^<]*<\/span>)/g, '<span class="show-claves">FROM</span>');
             codigo = codigo.replace(/(WHERE|where)(?![^<]*<\/span>)/g, '<span class="show-claves">WHERE</span>');
@@ -165,6 +169,40 @@
             codigo = codigo.replace(/(ANY|any)(?![^<]*<\/span>)/g, '<span class="show-claves">ANY</span>');
             codigo = codigo.replace(/(SOME|some)(?![^<]*<\/span>)/g, '<span class="show-claves">SOME</span>');
             codigo = codigo.replace(/(COLLATE|collate)(?![^<]*<\/span>)/g, '<span class="show-claves">COLLATE</span>');
+            codigo = codigo.replace(/(PROCEDURE|procedure)(?![^<]*<\/span>)/g, '<span class="show-claves">PROCEDURE</span>');
+            codigo = codigo.replace(/(TRIGGER|trigger)(?![^<]*<\/span>)/g, '<span class="show-claves">TRIGGER</span>');
+            codigo = codigo.replace(/(TRANSACTION|transaction)(?![^<]*<\/span>)/g, '<span class="show-claves">TRANSACTION</span>');
+            codigo = codigo.replace(/(COMMIT|commit)(?![^<]*<\/span>)/g, '<span class="show-claves">COMMIT</span>');
+            codigo = codigo.replace(/(ROLLBACK|rollback)(?![^<]*<\/span>)/g, '<span class="show-claves">ROLLBACK</span>');
+            codigo = codigo.replace(/(ASC|asc)(?![^<]*<\/span>)/g, '<span class="show-claves">ASC</span>');
+            codigo = codigo.replace(/(DESC|desc)(?![^<]*<\/span>)/g, '<span class="show-claves">DESC</span>');
+            codigo = codigo.replace(/(LIMIT|limit)(?![^<]*<\/span>)/g, '<span class="show-claves">LIMIT</span>');
+            codigo = codigo.replace(/(TOP|top)(?![^<]*<\/span>)/g, '<span class="show-claves">TOP</span>');
+            codigo = codigo.replace(/(WITH|with)(?![^<]*<\/span>)/g, '<span class="show-claves">WITH</span>');
+            codigo = codigo.replace(/(AS|as)(?![^<]*<\/span>)/g, '<span class="show-claves">AS</span>');
+            codigo = codigo.replace(/(SUM|sum)(?![^<]*<\/span>)/g, '<span class="show-met">SUM</span>');
+            codigo = codigo.replace(/(COUNT|count)/g, '<span class="show-met">COUNT</span>');
+            codigo = codigo.replace(/(AVG|avg)/g, '<span class="show-met">AVG</span>');
+            codigo = codigo.replace(/(MAX|max)/g, '<span class="show-met">MAX</span>');
+            codigo = codigo.replace(/(MIN|min)/g, '<span class="show-met">MIN</span>');
+            codigo = codigo.replace(/(GRANT|grant)/g, '<span class="show-claves">GRANT</span>');
+            codigo = codigo.replace(/(REVOKE|revoke)/g, '<span class="show-claves">REVOKE</span>');
+            codigo = codigo.replace(/(INDEX|index)/g, '<span class="show-claves">INDEX</span>');
+            codigo = codigo.replace(/(VIEW|view)/g, '<span class="show-claves">VIEW</span>');
+            codigo = codigo.replace(/(IDENTITY|identity)/g, '<span class="show-claves">IDENTITY</span>');
+            codigo = codigo.replace(/(SCHEMA|schema)/g, '<span class="show-claves">SCHEMA</span>');
+            codigo = codigo.replace(/\[/g, '<span class="show-eti">[</span>');
+            codigo = codigo.replace(/\]/g, '<span class="show-eti">]</span>');
+            codigo = codigo.replace(/0/g, '<span class="show-numeros">0</span>');
+            codigo = codigo.replace(/1/g, '<span class="show-numeros">1</span>');
+            codigo = codigo.replace(/2/g, '<span class="show-numeros">2</span>');
+            codigo = codigo.replace(/3/g, '<span class="show-numeros">3</span>');
+            codigo = codigo.replace(/4/g, '<span class="show-numeros">0</span>');
+            codigo = codigo.replace(/5/g, '<span class="show-numeros">1</span>');
+            codigo = codigo.replace(/6/g, '<span class="show-numeros">2</span>');
+            codigo = codigo.replace(/7/g, '<span class="show-numeros">3</span>');
+            codigo = codigo.replace(/8/g, '<span class="show-numeros">0</span>');
+            codigo = codigo.replace(/9/g, '<span class="show-numeros">1</span>');
 
             element.innerHTML = codigo;
         });

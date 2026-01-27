@@ -13,31 +13,24 @@
 <body>
 
 <pre class="cod-sql">
-    -- Código SQL
-    /**
-        Esto es un comentario multilinea
-        para generar código SQL
-    */
-    SELECT * FROM usuarios WHERE edad > 18;
+   /**
+        Ejemplo de un procedimiento almacenado que realiza una consulta SELECT
+        Comentando un procedimiento almacenado en SQL Server
+   */
+   CREATE OR ALTER PROCEDURE [dbo].[SP_EJEMPLO_SELECT]
+   @DNI VARCHAR(10)
+   AS
+   BEGIN 
+         SELECT NOMBRE, APELLIDO, FECHA_NACIMIENTO
+         FROM   USUARIOS
+         WHERE  DNI = @DNI
+    END
 
+    -- Comentario de una sola línea en SQL
 
-    CREATE OR ALTER FUNCTION ObtenerUsuariosActivos()
-    RETURNS TABLE (Id INT, Nombre VARCHAR(100), Activo BIT)
-    AS
-    BEGIN
-        RETURN SELECT Id, Nombre, Activo FROM Usuarios WHERE Activo = 1;
-    END;
-    "aassdadas"
-    SUBSTRING('Hola Mundo', 1, 4);
-    LEN('Hola Mundo');
-    
-    CREATE OR ALTER PROCESURE ActualizarEdadUsuario
-        @Id INT,
-        @NuevaEdad INT
-    AS
-    BEGIN
-        UPDATE Usuarios SET Edad = @NuevaEdad WHERE Id = @Id;
-    END;
+    SELECT COUNT(*) AS TOTAL_USUARIOS
+    FROM   USUARIOS
+    WHERE  FECHA_REGISTRO >= '2023-01-01';
 </pre>
 
 
