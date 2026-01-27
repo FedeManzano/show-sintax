@@ -9,14 +9,14 @@ pre[class^=cod-] {
   overflow: auto;
   font-family: "Source Code Pro" !important;
   font-weight: 300;
-  background-color: white !important;
-  color: black !important;
-  font-size: 1em;
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(0, 0, 0) !important;
+  font-size: 0.9em;
   position: relative;
 }
 pre[class^=cod-] .numeracion {
   position: absolute;
-  border-right: 2px solid #01db92;
+  border-right: 2px solid rgb(1, 219, 146);
   left: 0;
   top: 0;
   bottom: 0;
@@ -33,43 +33,43 @@ pre[class^=cod-] .numeracion span {
 }
 
 pre[class^=cod-] {
-  background-color: #f0f0f0 !important;
+  background-color: rgb(240, 240, 240) !important;
   color: black;
   font-weight: 300 !important;
 }
 pre[class^=cod-] .numeracion {
-  background-color: #f0f0f0;
+  background-color: rgb(240, 240, 240);
 }
 pre[class^=cod-] .numeracion span {
-  background-color: #f0f0f0;
+  background-color: rgb(240, 240, 240);
   border-bottom: 1px solid rgba(0, 0, 0, 0.178);
-  color: #272727;
+  color: rgb(39, 39, 39);
 }
 
 /**
     HTML
 */
 .show-eti {
-  color: #0053a0 !important;
+  color: rgb(0, 83, 160) !important;
   font-weight: 500;
 }
 
 .show-ang {
-  color: #2b2b2b !important;
+  color: rgb(43, 43, 43) !important;
   font-weight: 500;
 }
 
 .show-attr {
-  color: #5b0072 !important;
+  color: rgb(91, 0, 114) !important;
   font-weight: 500;
 }
 
 .show-string {
-  color: #fc0000 !important;
+  color: rgb(252, 0, 0) !important;
 }
 
 .show-com {
-  color: #006e18 !important;
+  color: rgb(0, 110, 24) !important;
 }
 
 .show-neutro {
@@ -81,77 +81,77 @@ pre[class^=cod-] .numeracion span {
     CSS
 */
 .show-selectores {
-  color: #d8351f !important;
+  color: rgb(216, 53, 31) !important;
 }
 
 .show-claves {
-  color: #6500a8 !important;
+  color: rgb(101, 0, 168) !important;
   font-weight: 500;
 }
 
 .show-prop {
-  color: #0065a8 !important;
+  color: rgb(0, 101, 168) !important;
 }
 
 .show-valor {
-  color: #a55d00 !important;
+  color: rgb(165, 93, 0) !important;
 }
 
 .show-llaves {
-  color: black !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 .show-res {
-  color: #0051bb !important;
+  color: rgb(0, 81, 187) !important;
   font-weight: 600;
 }
 
 .show-nombres {
-  color: #af6a1b !important;
+  color: rgb(175, 106, 27) !important;
 }
 
 .show-control {
-  color: #5b00c4 !important;
+  color: rgb(91, 0, 196) !important;
   font-weight: 500;
 }
 
 .show-op {
-  color: #04a064 !important;
+  color: rgb(4, 160, 100) !important;
   font-weight: 500;
 }
 
 .show-sistema {
-  color: #b83535 !important;
+  color: rgb(184, 53, 53) !important;
   font-weight: 500;
 }
 
 .show-numeros {
-  color: red !important;
+  color: rgb(255, 0, 0) !important;
 }
 
 .show-ajava {
-  color: #027e3a !important;
+  color: rgb(2, 126, 58) !important;
   font-weight: 500;
 }
 
 .show-sobre {
-  color: #2e2e2e !important;
+  color: rgb(46, 46, 46) !important;
   font-style: italic;
   font-weight: 400;
 }
 
 .show-met {
-  color: #8a135c !important;
+  color: rgb(138, 19, 92) !important;
   font-weight: 500;
 }
 
 .show-retorno {
-  color: black !important;
+  color: rgb(0, 0, 0) !important;
   font-weight: 600;
 }
 
 .show-json {
-  color: #004bd6 !important;
+  color: rgb(0, 75, 214) !important;
 }
 
 .show-error {
@@ -159,22 +159,22 @@ pre[class^=cod-] .numeracion span {
 }
 
 .show-llamadas {
-  color: #8a135c !important;
+  color: rgb(138, 19, 92) !important;
   font-weight: 400;
 }
 
 .show-var {
-  color: #00757e !important;
+  color: rgb(0, 117, 126) !important;
   font-weight: 500;
 }
 
 .show-c {
-  color: #ca1b1b !important;
+  color: rgb(202, 27, 27) !important;
   font-weight: 500;
 }
 
 .show-inc {
-  color: #fc0000 !important;
+  color: rgb(252, 0, 0) !important;
   font-weight: 600;
 }
 

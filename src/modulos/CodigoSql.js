@@ -77,6 +77,12 @@
             };
 
             // Métodos SQL
+            codigo = codigo.replace(/(USE|use)(?![^<]*<\/span>)/g, '<span class="show-claves">USE</span>');
+            codigo = codigo.replace(/(OUTPUT|output)(?![^<]*<\/span>)/g, '<span class="show-claves">OUTPUT</span>');
+            codigo = codigo.replace(/(TINYINT|tinyint)(?![^<]*<\/span>)/g, '<span class="show-claves">TINYINT</span>');
+            codigo = codigo.replace(/(NOCOUNT|nocount)(?![^<]*<\/span>)/g, '<span class="show-claves">NOCOUNT</span>');
+            codigo = codigo.replace(/(NOW|now)(?![^<]*<\/span>)/g, '<span class="show-met">NOW</span>');
+            codigo = codigo.replace(/(RAISERROR|raiserror)(?![^<]*<\/span>)/g, '<span class="show-claves">RAISERROR</span>');
             codigo = codigo.replace(/(SUBSTRING|substring)(?![^<]*<\/span>)/g, '<span class="show-met">SUBSTRING</span>');
             codigo = codigo.replace(/(LEN|len)(?![^<]*<\/span>)/g, '<span class="show-met">LEN</span>');
             codigo = codigo.replace(/(ISNULL|isnull)(?![^<]*<\/span>)/g, '<span class="show-met">ISNULL</span>');
@@ -86,8 +92,9 @@
             codigo = codigo.replace(/(CAST|cast)(?![^<]*<\/span>)/g, '<span class="show-met">CAST</span>');
             codigo = codigo.replace(/(CONVERT|convert)(?![^<]*<\/span>)/g, '<span class="show-met">CONVERT</span>');
             codigo = codigo.replace(/(NOW|now)(?![^<]*<\/span>)/g, '<span class="show-met">NOW</span>');
-
+             
             // Palabras clave SQL principales
+             codigo = codigo.replace(/(TRANSACTION|transaction)(?![^<]*<\/span>)/g, '<span class="show-claves">TRANSACTION</span>');
             codigo = codigo.replace(/(ON|on)(?![^<]*<\/span>)/g, '<span class="show-claves">ON</span>');
             codigo = codigo.replace(/(GROUP|group)(?![^<]*<\/span>)/g, '<span class="show-claves">GROUP</span>');
             codigo = codigo.replace(/(ORDER|order)(?![^<]*<\/span>)/g, '<span class="show-claves">ORDER</span>');
@@ -171,7 +178,7 @@
             codigo = codigo.replace(/(COLLATE|collate)(?![^<]*<\/span>)/g, '<span class="show-claves">COLLATE</span>');
             codigo = codigo.replace(/(PROCEDURE|procedure)(?![^<]*<\/span>)/g, '<span class="show-claves">PROCEDURE</span>');
             codigo = codigo.replace(/(TRIGGER|trigger)(?![^<]*<\/span>)/g, '<span class="show-claves">TRIGGER</span>');
-            codigo = codigo.replace(/(TRANSACTION|transaction)(?![^<]*<\/span>)/g, '<span class="show-claves">TRANSACTION</span>');
+           
             codigo = codigo.replace(/(COMMIT|commit)(?![^<]*<\/span>)/g, '<span class="show-claves">COMMIT</span>');
             codigo = codigo.replace(/(ROLLBACK|rollback)(?![^<]*<\/span>)/g, '<span class="show-claves">ROLLBACK</span>');
             codigo = codigo.replace(/(ASC|asc)(?![^<]*<\/span>)/g, '<span class="show-claves">ASC</span>');
@@ -191,6 +198,9 @@
             codigo = codigo.replace(/(VIEW|view)/g, '<span class="show-claves">VIEW</span>');
             codigo = codigo.replace(/(IDENTITY|identity)/g, '<span class="show-claves">IDENTITY</span>');
             codigo = codigo.replace(/(SCHEMA|schema)/g, '<span class="show-claves">SCHEMA</span>');
+            codigo = codigo.replace(/(IF|if)/g, '<span class="show-claves">IF</span>');
+            codigo = codigo.replace(/(TRY|try)/g, '<span class="show-claves">TRY</span>');
+            codigo = codigo.replace(/(CATCH|catch)/g, '<span class="show-claves">CATCH</span>');
             codigo = codigo.replace(/\[/g, '<span class="show-eti">[</span>');
             codigo = codigo.replace(/\]/g, '<span class="show-eti">]</span>');
             codigo = codigo.replace(/0/g, '<span class="show-numeros">0</span>');

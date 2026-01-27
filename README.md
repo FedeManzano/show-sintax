@@ -9,7 +9,7 @@
         <img src="https://img.shields.io/badge/Mega-download-red" alt="Descargar">
     </a>
     <a target="_blank" href="https://github.com/FedeManzano/show-code">
-        <img src="https://img.shields.io/badge/Version-2.0.0-blue" alt="Version">
+        <img src="https://img.shields.io/badge/Version-2.5.1-blue" alt="Version">
     </a>
     <a target="_blank" href="https://github.com/FedeManzano/show-code/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
@@ -47,6 +47,7 @@
 - :white_check_mark: **C**
 - :white_check_mark: **CSS**
 - :white_check_mark: **HTML**
+- :white_check_mark: **SQL**
 
 ### Características
 
@@ -174,6 +175,14 @@ Usa la etiqueta `<pre>` con la clase correspondiente al lenguaje:
         return 0;
     }
 </pre>
+
+<!-- SQL -->
+<pre class="cod-sql">
+    SELECT id, nombre, email 
+    FROM usuarios 
+    WHERE estado = 'activo' 
+    ORDER BY fecha_registro DESC;
+</pre>
 ```
 
 ### 3. Inicializar Show Code
@@ -186,6 +195,7 @@ Usa la etiqueta `<pre>` con la clase correspondiente al lenguaje:
     Show.ShowHtmlInit()
     Show.ShowCssInit()
     Show.ShowCInit()
+    Show.ShowSqlInit()
 </script>
 ```
 

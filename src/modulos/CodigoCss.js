@@ -188,8 +188,6 @@ import numerar from "./Numeracion"
             resultado = resultado.replace(/!important/g, "<span class='show-res'>!important</span>")
             e.innerHTML = resultado
 
-            if (lineas)
-                numerar(e, codigo)
         })
     }
 

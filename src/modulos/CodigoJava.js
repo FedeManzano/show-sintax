@@ -330,8 +330,6 @@ import numerar from "./Numeracion"
             resultado = resultado.replace(/9/g, "<span class='show-numeros'>9</span>")
 
             e.innerHTML = resultado
-            if (lineas)
-                numerar(e, codigo)
         })
     }
 

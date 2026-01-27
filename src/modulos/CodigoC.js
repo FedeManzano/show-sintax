@@ -235,9 +235,6 @@ import numerar from "./Numeracion"
 
 
             e.innerHTML = resultado
-
-            if (lineas)
-                numerar(e, codigo)
         })
     }
 
