@@ -13,17 +13,10 @@
 <body>
 
 <pre class="cod-sql">
-    -- Esto es comentario INLINE
-    SELECT COUNT(*) 
-    FROM tabla1 t1
-    WHERE EXISTS (
-        SELECT *
-        FROM tabla2 t2
-        WHERE t2.campo = t1.campo
-    );
-
-
-
+    SELECT * 
+    FROM usuarios 
+    WHERE estado = 'activo' 
+    ORDER BY fecha_creacion DESC;
 </pre>
 
 
