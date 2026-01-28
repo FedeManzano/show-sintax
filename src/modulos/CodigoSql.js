@@ -77,7 +77,9 @@
             };
 
             // Métodos SQL
-            codigo = codigo.replace(/(USE|use)(?![^<]*<\/span>)/g, '<span class="show-claves">USE</span>');
+            codigo = codigo.replace(/(EXISTS|exists)(?![^<]*<\/span>)/g, '<span class="show-claves">EXISTS</span>');
+            codigo = codigo.replace(/(GO|go)/g, '<span class="show-claves">GO</span>');
+            codigo = codigo.replace(/(USE|use)[\s]+/g, '<span class="show-claves">USE </span>');
             codigo = codigo.replace(/(OUTPUT|output)(?![^<]*<\/span>)/g, '<span class="show-claves">OUTPUT</span>');
             codigo = codigo.replace(/(TINYINT|tinyint)(?![^<]*<\/span>)/g, '<span class="show-claves">TINYINT</span>');
             codigo = codigo.replace(/(NOCOUNT|nocount)(?![^<]*<\/span>)/g, '<span class="show-claves">NOCOUNT</span>');
@@ -178,6 +180,7 @@
             codigo = codigo.replace(/(COLLATE|collate)(?![^<]*<\/span>)/g, '<span class="show-claves">COLLATE</span>');
             codigo = codigo.replace(/(PROCEDURE|procedure)(?![^<]*<\/span>)/g, '<span class="show-claves">PROCEDURE</span>');
             codigo = codigo.replace(/(TRIGGER|trigger)(?![^<]*<\/span>)/g, '<span class="show-claves">TRIGGER</span>');
+            
            
             codigo = codigo.replace(/(COMMIT|commit)(?![^<]*<\/span>)/g, '<span class="show-claves">COMMIT</span>');
             codigo = codigo.replace(/(ROLLBACK|rollback)(?![^<]*<\/span>)/g, '<span class="show-claves">ROLLBACK</span>');
@@ -186,7 +189,6 @@
             codigo = codigo.replace(/(LIMIT|limit)(?![^<]*<\/span>)/g, '<span class="show-claves">LIMIT</span>');
             codigo = codigo.replace(/(TOP|top)(?![^<]*<\/span>)/g, '<span class="show-claves">TOP</span>');
             codigo = codigo.replace(/(WITH|with)(?![^<]*<\/span>)/g, '<span class="show-claves">WITH</span>');
-            codigo = codigo.replace(/(AS|as)(?![^<]*<\/span>)/g, '<span class="show-claves">AS</span>');
             codigo = codigo.replace(/(SUM|sum)(?![^<]*<\/span>)/g, '<span class="show-met">SUM</span>');
             codigo = codigo.replace(/(COUNT|count)/g, '<span class="show-met">COUNT</span>');
             codigo = codigo.replace(/(AVG|avg)/g, '<span class="show-met">AVG</span>');
