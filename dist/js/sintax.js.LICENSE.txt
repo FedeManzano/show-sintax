@@ -1,5 +1,5 @@
 /*!
- * Show Code v2.0.0
+ * Show Code v2.5.2
  * Copyright Federico Manzano
  * Licencia MIT
  * Repositorio (https://github.com/FedeManzano/show-code)
